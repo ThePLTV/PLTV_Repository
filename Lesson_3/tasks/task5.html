@@ -9,26 +9,27 @@
 <body>
     <h1>задача 5</h1>
     
-    <p>Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.</p>
+    <p>З клавіатури вводиться назва категорії водія 
+        (А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль). 
+        Вивести на екран назву транспортного засобу, яким він може керувати.
+    </p>
 
     <script>
-        // введення данних
-        let a = parseFloat(prompt('введіть кількість секунд'))
-        // обчислення
-        let min = a / 60;
-        let hours = min / 60;
-        //выведення результату
-        document.write(`
-        <table>
-        <tr>
-            <td>хв</td>
-            <td>години</td>
-        </tr>
-        <tr>
-            <td>${min.toFixed(0)}</td>
-            <td>${hours.toFixed(2)}</td>
-        </tr>
-        </table>`)
+        let driverCategory = prompt('Ведіть категорію', 'A, B, C');
+        let result
+
+        switch (driverCategory) {
+            case 'A':
+                result = 'мотоцикл'
+                break
+            case 'B': 
+                result = 'легковий автомобіль'
+                break
+            case 'C':
+                result = 'вантажний автомобіль'
+                break
+        }
+        document.write(result)
     </script>
 </body>
 </html>

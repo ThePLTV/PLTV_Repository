@@ -14,14 +14,14 @@
         або вивести, що кількість однакова.</p>
 
     <script>
-        let firstChildName = (prompt ('Введіть назву першої дитини'))
-        let firstChildCandies = (prompt ('Введіть кількість цукерок у першої дитини'))
-        let secondChildName = (prompt ('Введіть назву другої дитини'))
-        let secondChildCandies = (prompt ('Введіть кількість цукерок у другої дитини'))
+        let firstChildName = prompt ('Введіть назву першої дитини')
+        let firstChildCandies = prompt ('Введіть кількість цукерок у першої дитини')
+        let secondChildName = prompt ('Введіть назву другої дитини')
+        let secondChildCandies = prompt ('Введіть кількість цукерок у другої дитини')
 
         if (firstChildCandies > secondChildCandies)
         document.write(`${firstChildName} має більше цукерок`)
-        if (firstChildCandies < secondChildCandies)
+        else if (firstChildCandies < secondChildCandies)
         document.write(`${secondChildName} має більше цукерок`)
         else
         document.write(`діти мають рівну кількість цукерок`)

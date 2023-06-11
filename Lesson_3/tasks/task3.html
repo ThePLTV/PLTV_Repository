@@ -9,27 +9,20 @@
 <body>
     <h1>задача 3</h1>
     
-    <p>Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).</p>
+    <p>Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.</p>
 
     <script>
-        // введення данних
-        let a = parseFloat(prompt('введіть вартість товару'))
-        let b = parseFloat(prompt('введіть кількість товару'))
-        // обчислення
-        let result = a * b;
-        let PDV = result / 100 * 5;
-        // выведення результату
-        document.write(`
-        <table>
-        <tr>
-            <td>загальна вартість</td>
-            <td>ПДВ</td>
-        </tr>
-        <tr>
-            <td>${result}</td>
-            <td>${PDV}</td>
-        </tr>
-        </table>`)
+        let minNumber = 1, maxNumber = 5;
+        let number = minNumber + Math.floor(Math.random()*(maxNumber-minNumber+1));
+        let usersChoise = parseInt(prompt('вгадайте число'))
+
+        if (number == usersChoise)
+        document.write('найс, ви вгадали, візьміть з полки пиріжок')
+        else { usersChoise = parseInt(prompt('друга спроба'))
+        if (number == usersChoise)
+        document.write('найс, ви вгадали, візьміть з полки пиріжок')
+        else if (number != usersChoise)
+        document.write('ви програли, oh no, anyway')}
     </script>
 </body>
 </html>

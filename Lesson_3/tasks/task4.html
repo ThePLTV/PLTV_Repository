@@ -9,26 +9,22 @@
 <body>
     <h1>задача 4</h1>
     
-    <p>Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.</p>
+    <p>З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом, працівником, пенсіонером).</p>
 
     <script>
-        // введення данних
-        let a = parseFloat(prompt('введіть довжину у сантиметрах'))
-        // обчислення
-        let m = a / 100;
-        let km = a / 100000;
-        //выведення результату
-        document.write(`
-        <table>
-        <tr>
-            <td>метри</td>
-            <td>кілометри</td>
-        </tr>
-        <tr>
-            <td>${m}</td>
-            <td>${km}</td>
-        </tr>
-        </table>`)
+        let usersAge = parseInt(prompt ('Введіть ваш вік'))
+        let result
+        
+        if (usersAge < 6)
+                document.write ('ви дитина')
+        else if (usersAge < 14 && usersAge >= 6)
+                document.write('ви школяр')
+         else if (usersAge < 22 && usersAge >= 14)
+                document.write('ви студент')
+        else if  (usersAge < 60 && usersAge >= 22)
+                document.write('ви працівник')
+        else if (usersAge > 60)
+                document.write('ви дєд')
     </script>
 </body>
 </html>

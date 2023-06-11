@@ -8,16 +8,21 @@
 </head>
 <body>
     <h1>Задача 2</h1>
-    
+
+    <p>З клавіатури вводиться ціна товару і кількість грошей. 
+        Якщо грошей не вистачає то відмовляємо у покупці, інакше, 
+        якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.
+    </p>
 
     <script>
-        let WA = parseInt(prompt('введіть вагу'))
-        const minA = 35
-        const maxA = 45
-        if (WA >= minA && WA <= maxA)
-            alert('все норм');
+        let productPrice = prompt('Введіть ціну товару')
+        let money = prompt('Введіть кількість грошей')
+
+
+        if (productPrice > money)
+        document.write('Невистачає коштів')
         else
-        alert('заважкий');
+        document.write('Пропонуємо придбати лотерейний квиток за 4грн')
     </script>
 </body>
 </html>

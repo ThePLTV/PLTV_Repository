@@ -9,45 +9,38 @@
 <body>
     <h1>задача 6</h1>
     
-    <p> З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</p>
+    <p>З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.</p>
 
     <script>
-        // введення данних
-        let a = parseFloat(prompt('введіть вартість першого товару'))
-        let b = parseFloat(prompt('введіть кількість одиниць першого товару'))
-        let c = parseFloat(prompt('введіть вартість другого товару'))
-        let d = parseFloat(prompt('введіть кількість одиниць другого товару'))
-        let e = parseFloat(prompt('введіть вартість третього товару'))
-        let f = parseFloat(prompt('введіть кількість одиниць третього товару'))
-        // обчислення
-        let firstProduct = a * b;
-        let secondProduct = c * d;
-        let thirdProduct = e * f;
-        let allProducts = firstProduct + secondProduct + thirdProduct;
-        //выведення результату
-        document.write(`
-        <table>
-        <tr>
-            <td>товар</td>
-            <td>вартість товару</td>
-        </tr>
-        <tr>
-            <td>перший товар</td>
-            <td>${firstProduct}</td>
-        </tr>
-        <tr>
-            <td>другий товар</td>
-            <td>${secondProduct}</td>
-        </tr>
-        <tr>
-            <td>третій товар</td>
-            <td>${thirdProduct}</td>
-        </tr>
-        <tr>
-            <td>весь товар</td>
-            <td>${allProducts}</td>
-        </tr>
-        </table>`)
+        let dayNumber = parseInt(prompt('Ведіть номер дня тижня'))
+        let result
+
+        switch (dayNumber) {
+            case 1:
+                result = 'monday'
+                break
+            case 2: 
+                result = 'tuesday'
+                break
+            case 3:
+                result = 'wednesday'
+                break
+            case 4:
+                result = 'thursday'
+                break
+            case 5:
+                result = 'friday'
+                break
+            case 6:
+                result = 'saturday'
+                break
+            case 7:
+                result = 'sunday'
+                break
+            default:
+                result = 'такого дня не існує'
+        }
+        document.write(result)
     </script>
 </body>
 </html>

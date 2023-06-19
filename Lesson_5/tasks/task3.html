@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>задача 1</h1>
+    
+    <p>Вивести з використанням циклів маркований список з випадковими числами (1-100).</p>
+
+    <script>
+        let minNum = 1
+        let maxNum = 1000;
+
+
+        let UserNumber = parseInt(prompt('write number'))
+        for(i = 1; i <= UserNumber; i++ ) {
+        let num = minNum + Math.floor(Math.random()*(maxNum-minNum+1));
+        document.write(`${num} <br>`)
+    }
+    </script>
+</body>
+</html>

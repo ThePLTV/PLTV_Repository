@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>задача 2</h1>
+    
+    <p>Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим</p>
+
+    <script>
+        function dayNum (number) {
+        if (number === 1 || number === 2 || number === 3 || number === 4 || number === 5)
+            return ('working day')
+        else if (number == 6 || number === 7)
+            return ('free day')
+        else
+            return('bullshit')
+       }
+       let day = dayNum (54)
+       document.write(day)
+    </script>
+</body>
+</html>

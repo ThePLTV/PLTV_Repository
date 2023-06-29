@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>задача 3</h1>
+    
+    <p>Створити окремі функції, які для 4 чисел знаходять:
+        1 суму;
+        2 добуток;
+        3 середнє арифметичне;
+        4 мінімальне значення. 
+    </p>
+
+    <script>
+        function sumNum (first, second, third, fourth) {
+         return  first + second + third + fourth
+       }
+       let sum = sumNum (5, 5, 5, 5)
+       document.write(sum)
+
+
+       function prodNum (first, second, third, fourth) {
+         return  first * second * third * fourth
+       }
+       let prod = prodNum (5, 5, 5, 5)
+       document.write(`<br>`)
+       document.write(prod)
+
+
+
+       function averageNum (first, second, third, fourth) {
+         return  (first + second + third + fourth) / 4
+       }
+       let average = averageNum (5, 5, 5, 5)
+       document.write(`<br>`)
+       document.write(average)
+
+
+
+       function minNum (first, second, third, fourth) {
+         if (first<second && first<third && first<fourth)
+         return first
+         else if (second<first && second<third && second<fourth)
+         return second
+         else if (third<first && third<second && third<fourth)
+         return third
+         else if (fourth<first && fourth<second && fourth<third)
+         return fourth
+       }
+       let min = minNum (12156, 50, 45, 5451)
+       document.write(`<br>`)
+       document.write(min)
+    </script>
+</body>
+</html>

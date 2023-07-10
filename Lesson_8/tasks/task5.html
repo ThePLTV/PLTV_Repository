@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 6</h1>
+    
+    <p>
+      Дано послідовність цін товарів та назв (у окремих масивах). 
+      Вивести на екран ті, які може собі дозволити користувач (кількість грошей задається).
+    </p>
+
+    <script>
+       let productPrices = [200, 500, 750]
+       let productsNames = ["Кабель", "Зарядка", "Навушники"]
+       let usersMoney = parseInt(prompt("Your money = ?"))
+
+      for (let i = 0; i < productPrices.length; i++) {
+        if (usersMoney >= productPrices[i]) {
+          document.write(`${productsNames[i]}<br>`);
+        }
+      }
+    </script>
+</body>
+</html>

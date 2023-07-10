@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>задача 1</h1>
+    
+    <p>
+        Задача 1. Дано масив, який містить оцінки з К предметів. 
+        Знайти середній бал і з’ясувати до якої категорії він відноситься 
+        (відмінник, двійочник (має хоча би одну двійку), хорошист (оцінки добре і відмінно), 
+        трійочник(є хоча би одна трійка)).
+    </p>
+
+    <script>
+        
+        
+        function averageScore(marks) {
+            let sum = 0
+            
+            let count = marks.length;
+            for (let K = 0; K < count; K++) {
+                sum += marks[K]
+            }
+        }
+            let average = sum / count
+            let category = '';
+
+            if (average === 5) {
+                category = "відмінник";
+            } else if (marks.includes(2)) {
+                category = "двійочник";
+              }  else if (marks.includes(4) && marks.includes(5)) {
+                category = "хорошист";
+            } else if (marks.includes(3)) 
+                {category = "трійочник"}
+            
+            return {
+                average: average.toFixed(0),
+                category: category
+        }
+        
+        
+        let marks = averageScore(5, 3, 4, 5, 3, 5, 4, 5, 4)
+        let result = calculateAverageAndCategory(marks);
+
+        
+        document.write('Середній бал: ' + result.average  + '<br>');
+        document.write('Категорія: ' + result.category);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Задача 3
+    </h1>
+    
+    <p>
+        Користувач вводить кількість елементів. 
+        Створити масив, у якому перші 5 елементів заповнені 1-цями, 
+        а інші до кінця масиву заповнені 7-ками. 
+    </p>
+
+    <script>
+        let arr = parseInt(prompt("Введіть к-сть елементів ="))
+        let arrayWithNumbers = []
+
+        for (let i = 0; i < arr; i++) {
+                arrayWithNumbers.push(1)
+            }
+            arrayWithNumbers.fill(7,5)
+            document.write(arrayWithNumbers)
+    </script>
+</body>
+</html>

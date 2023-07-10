@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Здача 2</h1>
+    
+    <p>
+        Користувач вводить кількість елементів. 
+        Створити масив, у якому перша половина заповнена 1-цями, а друга заповнена 7-ками.
+    </p>
+
+    <script>
+        let arr = parseInt(prompt("Введіть к-сть елементів ="))
+        let arrayWithNumbers = []
+
+        function arrayFunc (arr) {
+            const halfLength = Math.ceil(arr / 2);
+
+            for (let i = 0; i < halfLength; i++) {
+                arrayWithNumbers.push(1)
+            }
+            for (let i = halfLength; i < arr; i++) {
+            arrayWithNumbers.push(7);
+            }   
+            return arrayWithNumbers
+        }
+        arrayWithNumbers = arrayFunc(arr)
+        document.write(arrayWithNumbers)
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>задача 5</h1>
+    
+    <p>Задача 5. Дано послідовність оцінок учня. 
+
+      Підрахувати кількість:
+      1.  двійок
+      2.	кількість хороших оцінок (добре, відмінно);
+      3.	кількість оцінок, які нижче середнього.
+    </p>
+
+    <script>
+      let scores = [5,3,4,5,5,4,4,5,3,2]
+      let two = 0
+      let goodScores = 0
+      let lowerThanMedium = 0
+
+
+      for (let i = 0; i < scores.length; i++) {
+        if (scores[i] < 3)
+          two++
+        if (scores[i] > 3)
+        goodScores++
+        if (scores[i] < 4)
+        lowerThanMedium++
+      }
+
+      document.write(`<br>Двійок = ${two}`)
+      document.write(`<br>Хороших оцінок = ${goodScores}`)
+      document.write(`<br>Оцінок які нижче середньої = ${lowerThanMedium}`)
+    </script>
+</body>
+</html>
